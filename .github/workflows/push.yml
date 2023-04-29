@@ -1,16 +1,16 @@
-name: Build Docker 
+name: zlmPushRailway
 
 on: workflow_dispatch
       
 jobs:
-  build:
+  RUN:
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@main
+    - uses: actions/checkout@v3
     - name: Build & Push Image
-      run: |        
-         echo "dckr_pat_jsIgLvs40eekRkvMgU6mhPJR17o" | docker login -u npt13 --password-stdin
-         docker image build -t npt13/zmirr .
-         docker push npt13/zmirr
+      run: |
+        echo "dckr_pat_E_7AM4AtE3IIZbzRUbty0quwmgc" | docker login -u "drzawlinmg" --password-stdin
+        docker image build -t drzawlinmg/stable:ZmiRa .
+        docker push drzawlinmg/stable:ZmiRa
